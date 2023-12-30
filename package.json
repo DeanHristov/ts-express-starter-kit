@@ -17,8 +17,9 @@
     "start": "NODE_ENV=production node build/App.js",
     "lint": "eslint . --ext .ts",
     "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write",
-    "test": "jest",
-    "test:dev": "jest --watchAll"
+    "test": "jest --no-cache",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watchAll"
   },
   "devDependencies": {
     "@types/cookie-parser": "^1.4.3",
@@ -43,7 +44,9 @@
     "rimraf": "^5.0.1",
     "ts-jest": "^29.1.1",
     "typescript": "^5.2.2",
-    "ts-node": "^10.9.1"
+    "ts-node": "^10.9.1",
+    "whatwg-fetch": "^3.6.20",
+    "tsconfig-paths": "^4.2.0"
   },
   "dependencies": {
     "colors": "^1.4.0",

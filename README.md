@@ -81,14 +81,15 @@ functionality is grouped primarily by feature rather than the file type.
 
 All tasks automation are based on [NPM scripts](https://docs.npmjs.com/misc/scripts).
 
-| Tasks                     | Description                                           |
-|---------------------------|-------------------------------------------------------|
-| `npm run start:dev`       | Running the app in **dev** mode                       |
-| `npm run build`           | Building the code in **production-ready** mode        |
-| `npm run start`           | Running the app in **prod** mode                      |
-| `npm run test`            | Running the unit tests ( using jest)                  |
-| `npm run test:dev`        | Running the unit with `--watchAll` mode ( using jest) |
-| `npm run prettier-format` | Code formatting                                       |
+| Tasks                     | Description                                    |
+| ------------------------- | ---------------------------------------------- |
+| `npm run start:dev`       | Running the app in **dev** mode                |
+| `npm run build`           | Building the code in **production-ready** mode |
+| `npm run start`           | Running the app in **prod** mode               |
+| `npm run test`            | Running the unit tests ( using jest/RTL)       |
+| `npm run test:watch`      | Running the unit tests in "watch" mode         |
+| `npm run test:coverage`   | Running the coverage of the unit tests         |
+| `npm run prettier-format` | Code formatting                                |
 
 ## Running the Project
 
