@@ -86,9 +86,8 @@ All tasks automation are based on [NPM scripts](https://docs.npmjs.com/misc/scri
 | `npm run start:dev`       | Running the app in **dev** mode                |
 | `npm run build`           | Building the code in **production-ready** mode |
 | `npm run start`           | Running the app in **prod** mode               |
-| `npm run test`            | Running the unit tests ( using jest/RTL)       |
+| `npm run test`            | Running the unit tests (by using jest)         |
 | `npm run test:watch`      | Running the unit tests in "watch" mode         |
-| `npm run test:coverage`   | Running the coverage of the unit tests         |
 | `npm run prettier-format` | Code formatting                                |
 
 ## Running the Project

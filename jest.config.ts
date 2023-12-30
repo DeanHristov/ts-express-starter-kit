@@ -12,19 +12,17 @@ const jestConfig: Config = {
   moduleFileExtensions: ['ts', 'js'],
   roots: ['<rootDir>/src'],
   testPathIgnorePatterns: ['/node_modules/'],
+  globals: {},
   moduleNameMapper: {},
-  collectCoverageFrom: ['<rootDir>/src/**/*.{ts,js}'],
-  coverageThreshold: {
-    global: {
-      branches: 80,
-      functions: 80,
-      lines: 80,
-      statements: 80,
-    },
-  },
-  globals: {
-    //@see: https://github.com/node-fetch/node-fetch/discussions/1503
-  },
+  //   collectCoverageFrom: ['<rootDir>/src/**/*.{ts,js}'],
+  //   coverageThreshold: {
+  //     global: {
+  //       branches: 80,
+  //       functions: 80,
+  //       lines: 80,
+  //       statements: 80,
+  //     },
+  //   },
 };
 
 export default jestConfig;

@@ -5,7 +5,7 @@ export default class Utils {
    * @return {boolean} True if the value doesn't exist otherwise false
    */
   public static isNull(val: any): boolean {
-    return val === null || val === undefined;
+    return val === null || val === undefined || val === 0 || val === -1;
   }
 
   /**
@@ -41,5 +41,20 @@ export default class Utils {
    */
   public static isNotEmpty(val: any): boolean {
     return !Utils.isEmpty(val);
+  }
+
+  /**
+   * @description Check if in the array has any values with null | undefined
+   * @param arrayOfFields {Array<any>}
+   * @return boolean
+   */
+  public static isMissingFields(arrayOfFields: any[]): boolean {
+    if (arrayOfFields.length === 0) return true;
+
+    for (const field of arrayOfFields) {
+      if (Utils.isNull(field)) return true;
+    }
+
+    return false;
   }
 }
