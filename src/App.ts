@@ -55,7 +55,9 @@ app.use(`${API_VERSION}/health`, healthRoute);
 app.use(errorHandler);
 
 const server = app.listen(APP_PORT, () => {
-  console.log(`The app is running on: http://localhost:${APP_PORT}`);
+  console.log(
+    `The app is running on: http://localhost:${APP_PORT}${API_VERSION}/`,
+  );
 });
 
 process.on('unhandledRejection', async (reason: Error) => {

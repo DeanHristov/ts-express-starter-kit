@@ -1,3 +1,4 @@
+/* eslint-disable  @typescript-eslint/no-explicit-any */
 export default class Utils {
   /**
    * @description Checking if the value not exists
