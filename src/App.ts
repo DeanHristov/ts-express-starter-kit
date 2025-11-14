@@ -7,9 +7,9 @@ import rateLimit from 'express-rate-limit';
 import helmet from 'helmet';
 import hpp from 'hpp';
 import morgan from 'morgan';
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+
 // @ts-ignore
-import xssClean from 'xss-clean';
+import { xss } from 'express-xss-sanitizer';
 
 import errorHandler from './middlewares/errorHandler';
 import healthRoute from './routes/healthRoute';
@@ -22,7 +22,7 @@ app.use(express.json());
 app.use(express.urlencoded());
 
 // Prevent XSS attacks
-app.use(xssClean());
+app.use(xss());
 
 // Set security headers
 app.use(helmet());
