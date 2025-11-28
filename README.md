@@ -181,4 +181,4 @@ on [NPM scripts](https://docs.npmjs.com/misc/scripts).
 
 ## Made by
 
-Author: [D.cHristov](https://github.com/DeanHristov) | Version: [1.0.0](/docs/)
+Author: [D. Hristov](https://github.com/DeanHristov) | Version: [1.0.0](/docs/)
