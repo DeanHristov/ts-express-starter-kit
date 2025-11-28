@@ -1,15 +1,14 @@
 # Motivation
 
-Basically, When we start a new project we have to do a whole bunch of boring work before starting the actual work,
-right? Also, we have to provide some kind of basic protection as well. This project trying to solve this problem.
-
-This repository is a boilerplate for API-based development and it is a simple start kit (blueprint), that provides
-minimal/common functionality to start building an API based on the ExpressJS framework and TypeScript.
+This repository is a simple starter kit (boilerplate), that provides
+minimal/common functionality to start building REST API with ExpressJS and
+TypeScript.
 
 ## Requirements
 
 - [Node](https://nodejs.org/en/) `^16.15.0`
 - [NPM](https://www.npmjs.com/) `^8.5.5`
+- [Docker](https://www.docker.com/) `Latest one` - Optional
 
 ## Installation
 
@@ -22,10 +21,69 @@ $ git clone git@github.com:DeanHristov/ts-express-starter-kit.git <project-name>
 $ cd <project-name>
 ```
 
-When you're done with the steps above, run the following command:
+When you're done with the previous step, run the following command:
 
 ```bash
 $ npm install # or yarn install
+```
+
+Before we proceed further we need create a few environment variables. 
+In order to do that you must create **~/.env** file within the root directory
+of the project and copy-paste template below.
+
+```dotenv
+NODE_PORT=3002
+
+API_VERSION=/api/v1
+
+USE_COOKIE=false
+
+# 1m = 60000
+# 10m = 600000
+# 1h = 3600000ms
+JWT_EXPIRE=10m
+
+# 1m = 60000ms
+# 10m = 600000ms
+# 1h = 3600000ms
+JWT_COOKIE_EXPIRE=10m
+JWT_SECRET=super-secret-word
+```
+
+## Running the Project
+
+Running the app in **development** mode.
+
+```bash
+$ npm run start:dev
+```
+
+## Running the Project in production mode.
+
+Firstly, build the app with the following command:
+
+```bash
+$ npm run build
+```
+
+Running the app in **development** mode.
+
+```bash
+$ npm start
+```
+
+## Running app by using Docker.
+
+Firstly, create a new (local) image from prepared template (Dockerfile):
+
+```bash
+$ docker build . -t my-api
+```
+
+Then, start the app
+
+```bash
+$ docker run -d -p 3002:3002 --name project-name -v .:/app my-api
 ```
 
 ## The starter comes with built-in functionality
@@ -79,10 +137,11 @@ functionality is grouped primarily by feature rather than the file type.
 
 ## Main tasks
 
-All tasks automation are based on [NPM scripts](https://docs.npmjs.com/misc/scripts).
+All tasks automation are based
+on [NPM scripts](https://docs.npmjs.com/misc/scripts).
 
 | Tasks                     | Description                                    |
-| ------------------------- | ---------------------------------------------- |
+|---------------------------|------------------------------------------------|
 | `npm run start:dev`       | Running the app in **dev** mode                |
 | `npm run build`           | Building the code in **production-ready** mode |
 | `npm run start`           | Running the app in **prod** mode               |
@@ -90,56 +149,13 @@ All tasks automation are based on [NPM scripts](https://docs.npmjs.com/misc/scri
 | `npm run test:watch`      | Running the unit tests in "watch" mode         |
 | `npm run prettier-format` | Code formatting                                |
 
-## Running the Project
-
-Before starting the app you must create **~/.env** file with the following
-variables:
-
-```dotenv
-NODE_PORT=3002
-
-API_VERSION=/api/v1
-
-USE_COOKIE=false
-
-# 1m = 60000
-# 10m = 600000
-# 1h = 3600000ms
-JWT_EXPIRE=10m
-
-# 1m = 60000ms
-# 10m = 600000ms
-# 1h = 3600000ms
-JWT_COOKIE_EXPIRE=10m
-JWT_SECRET=super-secret-word
-```
-
-Running the app in **development** mode.
-
-```bash
-$ npm run start:dev
-```
-
-## Running the Project in production mode.
-
-Firstly, build the app with the following command:
-
-```bash
-$ npm run build
-```
-
-Running the app in **development** mode.
-
-```bash
-$ npm start
-```
-
 ## Used technologies
 
 - NodeJS- https://nodejs.org/en/
 - Git - https://git-scm.com/
 - TypeScript - https://www.typescriptlang.org/
 - ExpressJS - https://expressjs.com/
+- Docker - https://www.docker.com/
 
 ## NPM Packages
 
@@ -165,5 +181,4 @@ $ npm start
 
 ## Made by
 
-Author: [D. Hristov](https://dhristov.eu/) | Version: [1.0.0](/docs/) |
-License: [MIT](https://opensource.org/licenses/MIT)
+Author: [D. Hristov](https://dhristov.eu/) | Version: [1.0.0](/docs/)
