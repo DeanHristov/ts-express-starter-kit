@@ -21,13 +21,7 @@ $ git clone git@github.com:DeanHristov/ts-express-starter-kit.git <project-name>
 $ cd <project-name>
 ```
 
-When you're done with the previous step, run the following command:
-
-```bash
-$ npm install # or yarn install
-```
-
-Before we proceed further we need create a few environment variables. 
+Before we proceed further we need create a few environment variables.
 In order to do that you must create **~/.env** file within the root directory
 of the project and copy-paste template below.
 
@@ -50,15 +44,19 @@ JWT_COOKIE_EXPIRE=10m
 JWT_SECRET=super-secret-word
 ```
 
-## Running the Project
+## Running the app without Docker
+When you're done with the previous step, run the following command:
+
+```bash
+$ npm install # or yarn install
+```
 
 Running the app in **development** mode.
 
 ```bash
 $ npm run start:dev
 ```
-
-## Running the Project in production mode.
+### Running the Project in production mode.
 
 Firstly, build the app with the following command:
 
@@ -72,7 +70,8 @@ Running the app in **development** mode.
 $ npm start
 ```
 
-## Running app by using Docker.
+
+## Running the app with Docker
 
 Firstly, create a new (local) image from prepared template (Dockerfile):
 
