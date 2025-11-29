@@ -27,7 +27,7 @@ When you're done with the previous step, run the following command:
 $ npm install # or yarn install
 ```
 
-Before we proceed further we need create a few environment variables. 
+Before we proceed further we need create a few environment variables.
 In order to do that you must create **~/.env** file within the root directory
 of the project and copy-paste template below.
 
@@ -181,4 +181,4 @@ on [NPM scripts](https://docs.npmjs.com/misc/scripts).
 
 ## Made by
 
-Author: [D. Hristov](https://dhristov.eu/) | Version: [1.0.0](/docs/)
+Author: [D. Hristov](https://github.com/DeanHristov) | Version: [1.0.0](/docs/)
