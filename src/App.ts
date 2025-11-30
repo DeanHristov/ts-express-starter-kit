@@ -11,8 +11,8 @@ import morgan from 'morgan';
 // @ts-ignore
 import { xss } from 'express-xss-sanitizer';
 
-import errorHandler from './middlewares/errorHandler';
 import healthRoute from './routes/healthRoute';
+import errorHandlerMiddleware from './middlewares/errorHandlerMiddleware';
 
 const { NODE_PORT, NODE_ENV, API_VERSION } = process.env;
 const APP_PORT = NODE_PORT || 3000;
@@ -52,7 +52,7 @@ if (NODE_ENV === 'development') {
 // Adding Routes...
 app.use(`${API_VERSION}/health`, healthRoute);
 
-app.use(errorHandler);
+app.use(errorHandlerMiddleware);
 
 const server = app.listen(APP_PORT, () => {
   console.log(

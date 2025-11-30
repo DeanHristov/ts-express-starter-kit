@@ -109,11 +109,11 @@ functionality is grouped primarily by feature rather than the file type.
 ├── src                             # Application source code is stored here.
 │   ├── controllers                # A directory contains files that control the behavior of the routes.
 │       └── *.ts                    # Controlling how the user interacts with a route.
-│   ├── core                        # The core functionality is stored here.
-│       └── *.ts                    # Usually, represent models.
 │   ├── middlewares                 # A directory that contains files with expressjs-based middlewares.
 │       └── *.ts                    # Each file contains a single middleware.
 │   ├── routes                      # Contains files that represent endpoints (URIs) and respond to client requests.
+│       └── *.ts                    # Represent a single endpoint.
+│   ├── services                    # Contains files that manage the business logic
 │       └── *.ts                    # Represent a single endpoint.
 │   ├── utils                       # A directory that contains utility files.
 │       └── *.ts                    # A utility file - Common used functionality.
@@ -132,6 +132,7 @@ functionality is grouped primarily by feature rather than the file type.
 ├── package-lock.json               # Place where we control the dependencies
 ├── README.md                       # A documentation file
 ├── tsconfig.json                   # Config file for typescript
+├── Dockerfile                      # A tepmlate that we are using to create an image
 ```
 
 ## Main tasks
